@@ -612,8 +612,8 @@ progress {
   background-color: #fff;
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
-  max-width: 100px;
-  height: 100px;
+  max-width: 125px;
+  height: 125px;
 }
 
 .figure {
@@ -4612,7 +4612,7 @@ textarea.form-control-lg {
 .card-img-top,
 .card-img-bottom {
   width: 10px;
-  height: 100px;
+  height: 125px;
 }
 
 .card-img,
@@ -4635,6 +4635,7 @@ textarea.form-control-lg {
     display: flex;
     flex-flow: row wrap;
   }
+
   .card-group > .card {
     flex: 1 0 0%;
     margin-bottom: 0;
@@ -11293,8 +11294,8 @@ textarea.form-control-lg {
 }
 
 .card-img-top {
-  height: 200px;
-  width: 200px;
+  height: 125px;
+  width: 125px;
   object-fit: contain;
   margin-left: auto;
   margin-right: auto;
@@ -11323,3 +11324,15 @@ textarea.form-control-lg {
   margin-top: 40px;
   margin-bottom: -60px;
 }
+
+@media screen and (min-width: 600) {
+  .card-img-top{
+    height: auto;
+    max-width: 100%;
+    
+    width: 10%;
+  }
+  
+}
+
+

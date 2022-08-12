@@ -5,7 +5,7 @@ fetch("test1.json")
 
         //i = 1
 
-        for (var i = 0; i <= 7; i++){
+        for (var i = 0; i <= 12; i++){
             document.querySelector("#name-" + i.toString()).innerText = data[i][0];
             document.querySelector("#image-" + i.toString()).src = data[i][5];
             document.querySelector("#price-" + i.toString()).innerText = data[i][3];
@@ -20,7 +20,7 @@ fetch("bestbuyDealOfDay.json")
     .then(response => response.json())
     .then(data => {
 
-        i = 8
+        i = 13
         document.querySelector("#name-" + i.toString()).innerText = data[0];
         document.querySelector("#image-" + i.toString()).src = data[5];
         document.querySelector("#price-" + i.toString()).innerText = data[3];
@@ -29,22 +29,35 @@ fetch("bestbuyDealOfDay.json")
         document.querySelector("#percentOff-" + i.toString()).innerText = data[4];        
     })
 
-    fetch("bestbuy.json")
-        .then(response => response.json())
-        .then(data => {
+fetch("bestbuy.json")
+    .then(response => response.json())
+    .then(data => {
 
-            //i = 1
+        //i = 1
 
-            for (var i = 9; i <= 12; i++){
-                document.querySelector("#name-" + i.toString()).innerText = data[i-9][0];
-                document.querySelector("#image-" + i.toString()).src = data[i-9][5];
-                document.querySelector("#price-" + i.toString()).innerText = data[i-9][3];
-                document.querySelector("#newPrice-" + i.toString() ).innerText = data[i-9][2];
-                document.querySelector("#sale-" + i.toString()).href = data[i-9][1];
-                document.querySelector("#percentOff-" + i.toString()).innerText = data[i-9][4];
-            }
-            
-        })
+        for (var i = 14; i <= 16; i++){
+            document.querySelector("#name-" + i.toString()).innerText = data[i-14][0];
+            document.querySelector("#image-" + i.toString()).src = data[i-14][5];
+            document.querySelector("#price-" + i.toString()).innerText = data[i-14][3];
+            document.querySelector("#newPrice-" + i.toString() ).innerText = data[i-14][2];
+            document.querySelector("#sale-" + i.toString()).href = data[i-14][1];
+            document.querySelector("#percentOff-" + i.toString()).innerText = data[i-14][4];
+        }
+        
+    })
+
+fetch("walmart.json")
+    .then(response => response.json())
+    .then(data => {
+
+        for (var i = 18; i <= 26; i++){
+            document.querySelector("#name-" + i.toString()).innerText = data[i-18][0];
+            document.querySelector("#image-" + i.toString()).src = data[i-18][4];
+            document.querySelector("#price-" + i.toString()).innerText = data[i-18][3];
+            document.querySelector("#newPrice-" + i.toString() ).innerText = data[i-18][2];
+            document.querySelector("#sale-" + i.toString()).href = data[i-18][1];
+        }
+    })
 
 
 
