@@ -50,7 +50,7 @@ fetch("walmart.json")
     .then(response => response.json())
     .then(data => {
 
-        for (var i = 18; i <= 26; i++){
+        for (var i = 18; i <= 25; i++){
             document.querySelector("#name-" + i.toString()).innerText = data[i-18][0];
             document.querySelector("#image-" + i.toString()).src = data[i-18][4];
             document.querySelector("#price-" + i.toString()).innerText = data[i-18][3];
