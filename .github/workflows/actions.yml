@@ -2,7 +2,7 @@ name: run webscraper.py
 
 on:
   schedule:
-    - cron: '*/5 * * * *' # Runs every 6 hours
+    - cron: '*/2 * * * *' # Runs every 6 hours
 
 jobs:
   build:
