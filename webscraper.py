@@ -8,6 +8,8 @@ import json
 
 amazonAffiliateTag = 'manitmishra-20'
 
+
+
 def extract_record(item):
     # description and url
     parentUrl = item.find('a', href=True)["href"]
@@ -143,7 +145,7 @@ def extract_walmart_record(item):
 def main():
 
     #Amazon
-    driver = webdriver.Chrome('/path/to/your_chrome_driver_dir/chromedriver',chrome_options=chrome_options)
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     records_list = []
     url = "https://amzn.to/3zCO1z9"
     driver.get(url)
@@ -163,7 +165,7 @@ def main():
 
 
     #Bestbuy
-    driver1 = webdriver.Chrome('/path/to/your_chrome_driver_dir/chromedriver',chrome_options=chrome_options)
+    driver1 = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     bestbuy_records_list = []
 
     bestbuy_url = "https://www.bestbuy.com/site/misc/deal-of-the-day/pcmcat248000050016.c?id=pcmcat248000050016&acampID=1&ref=212&loc=1&gclid=EAIaIQobChMIlJrBiuW1-QIVlcLCBB2joAAYEAAYASAAEgLCF_D_BwE&gclsrc=aw.ds"
@@ -199,7 +201,7 @@ def main():
 
 
     #BestBuy More Deals
-    driver2 = webdriver.Chrome('/path/to/your_chrome_driver_dir/chromedriver',chrome_options=chrome_options)
+    driver2 = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     bestbuy_more_deals_records_list = []
 
     url = "https://www.bestbuy.com/site/misc/deal-of-the-day/pcmcat248000050016.c?id=pcmcat248000050016&acampID=1&ref=212&loc=1&gclid=EAIaIQobChMIlJrBiuW1-QIVlcLCBB2joAAYEAAYASAAEgLCF_D_BwE&gclsrc=aw.ds"
@@ -215,8 +217,9 @@ def main():
 
     driver2.close
 
+
     #Walmart Deals
-    driver3 = webdriver.Chrome('/path/to/your_chrome_driver_dir/chromedriver',chrome_options=chrome_options)
+    driver3 = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     walmart_records_list = []
 
     url = "https://www.walmart.com/shop/deals"
