@@ -21,14 +21,14 @@ def extract_record(item):
         # price after discount
         price_parent = item.find('span', 'a-size-mini')
         price_second_parent = price_parent.find('span', 'a-price')
-        price = price_second_parent.find('span', 'a-price-whole').text
+        price = "$" + price_second_parent.find('span', 'a-price-whole').text
     except AttributeError:
         return ''
 
     try:
         # price before discount
         realprice_parent = item.find('span', 'a-size-small a-color-secondary')
-        realprice = realprice_parent.find('span', 'a-price-whole').text
+        realprice = "$" + realprice_parent.find('span', 'a-price-whole').text
     except AttributeError:
         return ''
 
