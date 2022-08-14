@@ -35,7 +35,7 @@ fetch("bestbuy.json")
 
         //i = 1
 
-        for (var i = 14; i <= 16; i++){
+        for (var i = 14; i <= 17; i++){
             document.querySelector("#name-" + i.toString()).innerText = data[i-14][0];
             document.querySelector("#image-" + i.toString()).src = data[i-14][5];
             document.querySelector("#price-" + i.toString()).innerText = data[i-14][3];
