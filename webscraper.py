@@ -247,9 +247,6 @@ def main():
 
     with open('bestbuy.json', 'w') as w:
         json.dump(bestbuy_more_deals_records_list, w)
-
-    with open('walmart.json', 'w') as w:
-        json.dump(walmart_records_list, w)
     
 
 main()
